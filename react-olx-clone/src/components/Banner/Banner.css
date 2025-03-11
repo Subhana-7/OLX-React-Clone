@@ -1,0 +1,55 @@
+.bannerParentDiv {
+  padding-top: 4em;
+}
+
+.bannerParentDiv .bannerChildDiv .menuBar {
+  display: flex;
+  padding: 10px 16px 10px 16px;
+}
+
+.bannerParentDiv .bannerChildDiv .menuBar .categoryMenu {
+  display: flex;
+  align-items: center;
+}
+
+.bannerParentDiv .bannerChildDiv .menuBar .categoryMenu .category-link {
+  margin-right: 16px;
+  font-weight: bolder;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.bannerParentDiv .bannerChildDiv .menuBar .otherQuickOptions {
+  display: flex;
+  gap: 10px;
+}
+
+.bannerParentDiv .bannerChildDiv .menuBar .otherQuickOptions .category-link {
+  padding: 10px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.category-link:hover {
+  opacity: 0.8;
+}
+
+.bannerChildDiv .banner {
+  position: relative;
+  width: 100vw;
+}
+
+.bannerChildDiv .banner img {
+  width: 100vw;
+}
+
+@media only screen and (max-width: 700px) {
+  .otherQuickOptions {
+    display: none;
+  }
+  .bannerChildDiv .banner {
+    position: relative;
+  }
+}

@@ -1,0 +1,152 @@
+.createContainer {
+  background-color: #f2f4f5;
+  min-height: calc(100vh - 70px);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.formWrapper {
+  background: white;
+  padding: 32px;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 60px;
+}
+
+.formTitle {
+  color: #002f34;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.formGroup {
+  margin-bottom: 24px;
+}
+
+.formGroup label {
+  display: block;
+  color: #002f34;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #002f34;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #002f34;
+  background: white;
+  transition: border-color 0.2s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #00474f;
+}
+
+.input::placeholder {
+  color: #666;
+}
+
+.priceInput {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.currencySymbol {
+  position: absolute;
+  left: 16px;
+  color: #002f34;
+  font-weight: 600;
+}
+
+.priceInput .input {
+  padding-left: 32px;
+}
+
+.fileInputWrapper {
+  border: 2px dashed #002f34;
+  padding: 20px;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.fileInputWrapper:hover {
+  border-color: #00474f;
+}
+
+.fileInput {
+  width: 100%;
+  cursor: pointer;
+}
+
+.imagePreview {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.imagePreview img {
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 16px;
+  background: #002f34;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submitButton:hover:not(:disabled) {
+  background: #00474f;
+}
+
+.submitButton:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+.loadingText {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .formWrapper {
+    padding: 20px;
+  }
+
+  .formTitle {
+    font-size: 20px;
+  }
+
+  .input {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .submitButton {
+    padding: 14px;
+    font-size: 14px;
+  }
+}
