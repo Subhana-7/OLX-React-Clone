@@ -4,10 +4,9 @@ import {auth,db} from '../firebase/config'
 export const FirebaseContext = createContext(null);
 
 export const FirebaseProvider = ({children}) => {
-  const [text,setText] = useState("")
-  const [user,setUser] = useState("hello");
+  const [user,setUser] = useState(null);
   return(
-    <FirebaseContext.Provider value={{auth,db,user,text,setText}}>
+    <FirebaseContext.Provider value={{auth,db,user,setUser}}>
       {children}
       </FirebaseContext.Provider>
   )

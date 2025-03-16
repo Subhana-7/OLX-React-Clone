@@ -11,7 +11,7 @@ import { signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 
 function Header() {
-  const { user, auth ,text,setText} = useContext(FirebaseContext);
+  const { user, auth} = useContext(FirebaseContext);
   const navigate = useNavigate();
   const [showDropdown, setShowDropdown] = useState(false);
 
@@ -47,9 +47,8 @@ function Header() {
           </div>
         </div>
         <div className="language">
-          <span> {text} </span>
+          <span>English</span>
           <Arrow></Arrow>
-          {/* <input type="text" value={text} readOnly/> */}
         </div>
         <div
           className="loginPage"

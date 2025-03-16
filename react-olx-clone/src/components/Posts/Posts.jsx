@@ -4,11 +4,9 @@ import "./Posts.css"
 import {Link} from "react-router-dom"
 import {db} from "../../firebase/config"
 import {collection , getDocs} from "firebase/firestore"
-import { FirebaseContext } from '../../store/FirebaseContext'
 
 
 const Posts = () => {
-  const {text,setText} = useContext(FirebaseContext)
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -75,12 +73,11 @@ const Posts = () => {
       <div className="recommendations">
         <div className="heading">
           <span>Fresh recommendations</span>
-          <input type="text" value={text} placeholder='Type something'  onChange={(e) => setText(e.target.value)} />
         </div>
         <div className="cards">
           {products.slice(0, 5).map((product) => (
-            <Link to="/view" state={{ product }}>
-              <div className="card" key={product.id}>
+            <Link to="/view" state={{ product }} key={product.id} >
+              <div className="card" >
                 <div className="favorite">
                   <Heart />
                 </div>
